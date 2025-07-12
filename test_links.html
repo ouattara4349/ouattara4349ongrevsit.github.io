@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test des liens - Renaissance Espoir de Vie</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="unified.css">
+    
+    <style>
+        .test-section {
+            padding: 20px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .success { background-color: #d4edda; border-color: #c3e6cb; }
+        .error { background-color: #f8d7da; border-color: #f5c6cb; }
+        .test-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Test des liens - Renaissance Espoir de Vie</h1>
+        
+        <div class="test-section success">
+            <h2>✅ CSS chargé</h2>
+            <p>Si vous voyez ce texte stylé, les fichiers CSS sont bien chargés.</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>🖼️ Test des images</h2>
+            <p>Vérification des images principales :</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <div>
+                    <img src="images/logo.jpg" alt="Logo" class="test-image">
+                    <p>Logo</p>
+                </div>
+                <div>
+                    <img src="images/equipe1.png" alt="Équipe 1" class="test-image">
+                    <p>Équipe 1</p>
+                </div>
+                <div>
+                    <img src="images/veuve.jpg" alt="Veuve" class="test-image">
+                    <p>Veuve</p>
+                </div>
+                <div>
+                    <img src="images/actions.jpg" alt="Actions" class="test-image">
+                    <p>Actions</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>🔗 Liens vers les pages</h2>
+            <p>Test des liens de navigation :</p>
+            <a href="index.html" class="btn btn-primary">Accueil</a>
+            <a href="apropos.html" class="btn btn-secondary">À propos</a>
+            <a href="actions.html" class="btn btn-outline">Actions</a>
+        </div>
+        
+        <div class="test-section">
+            <h2>📊 Statistiques</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="300">0</div>
+                    <div class="stat-label">Femmes accompagnées</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="120">0</div>
+                    <div class="stat-label">Enfants formés</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+    <script src="animations.js"></script>
+    <script>
+        console.log('✅ JavaScript chargé avec succès');
+        
+        // Test des animations
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('✅ DOM chargé');
+            
+            // Test des statistiques
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    stat.textContent = Math.floor(current);
+                }, 20);
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,622 @@
+/* ===== ANIMATIONS CSS ===== */
+
+/* Animation d'entrée pour les éléments */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Classes d'animation */
+.slide-in-left {
+    animation: slideInFromLeft 0.8s ease-out;
+}
+
+.slide-in-right {
+    animation: slideInFromRight 0.8s ease-out;
+}
+
+.slide-in-top {
+    animation: slideInFromTop 0.8s ease-out;
+}
+
+.slide-in-bottom {
+    animation: slideInFromBottom 0.8s ease-out;
+}
+
+.fade-in-scale {
+    animation: fadeInScale 0.6s ease-out;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200px 100%;
+    animation: shimmer 2s infinite;
+}
+
+.rotate {
+    animation: rotate 2s linear infinite;
+}
+
+/* Animations au scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animations pour les cartes */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Animation pour les boutons */
+.btn-animate {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-animate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-animate:hover::before {
+    left: 100%;
+}
+
+/* Animation pour les statistiques */
+.counter-animation {
+    transition: all 0.5s ease-out;
+}
+
+/* Animation pour les images */
+.image-hover {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.image-hover img {
+    transition: all 0.3s ease;
+}
+
+.image-hover:hover img {
+    transform: scale(1.1);
+}
+
+/* Animation pour la navigation */
+.nav-link-animate {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link-animate::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-orange);
+    transition: width 0.3s ease;
+}
+
+.nav-link-animate:hover::before {
+    width: 100%;
+}
+
+/* Animation pour les témoignages */
+.testimonial-slide {
+    transition: all 0.5s ease-in-out;
+}
+
+.testimonial-slide.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.testimonial-slide.prev {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.testimonial-slide.next {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* Animation pour le loader */
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary-orange);
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+}
+
+/* Animation pour les notifications */
+.notification {
+    animation: slideInFromTop 0.5s ease-out;
+}
+
+.notification.success {
+    background: var(--primary-green);
+    color: white;
+}
+
+.notification.error {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Animation pour les modales */
+.modal {
+    animation: fadeInScale 0.3s ease-out;
+}
+
+.modal-backdrop {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Animation pour les formulaires */
+.form-field {
+    transition: all 0.3s ease;
+}
+
+.form-field:focus-within {
+    transform: translateY(-2px);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+/* Animation pour les icônes */
+.icon-bounce {
+    animation: bounce 1s infinite;
+}
+
+.icon-pulse {
+    animation: pulse 2s infinite;
+}
+
+.icon-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Animation pour les progress bars */
+.progress-bar {
+    width: 0;
+    transition: width 1s ease-out;
+}
+
+/* Animation pour les tooltips */
+.tooltip {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.tooltip.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation pour les accordéons */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content.open {
+    max-height: 500px;
+}
+
+/* Animation pour les onglets */
+.tab-content {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+}
+
+.tab-content.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animation pour les galeries */
+.gallery-item {
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+/* Animation pour les timelines */
+.timeline-item {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animation pour les particules */
+.particle {
+    position: absolute;
+    background: var(--primary-orange);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Animation pour les effets de parallaxe */
+.parallax {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Animation pour les effets de glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animation pour les effets de néon */
+.neon {
+    text-shadow: 0 0 5px var(--primary-orange),
+                 0 0 10px var(--primary-orange),
+                 0 0 15px var(--primary-orange);
+    animation: pulse 2s infinite;
+}
+
+/* Animation pour les effets de gradient animé */
+.gradient-animate {
+    background: linear-gradient(-45deg, var(--primary-orange), var(--primary-green), var(--secondary-orange), var(--accent-gold));
+    background-size: 400% 400%;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animation pour les effets de texte */
+.text-reveal {
+    overflow: hidden;
+}
+
+.text-reveal span {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.6s ease;
+}
+
+.text-reveal.revealed span {
+    transform: translateY(0);
+}
+
+/* Animation pour les effets de scroll */
+.scroll-indicator {
+    animation: bounce 2s infinite;
+}
+
+/* Animation pour les effets de hover sur les cartes */
+.card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.card-3d:hover {
+    transform: rotateY(10deg) rotateX(5deg);
+}
+
+/* Animation pour les effets de loading */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* Animation pour les effets de focus */
+.focus-ring {
+    transition: all 0.3s ease;
+}
+
+.focus-ring:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.3);
+}
+
+/* Animation pour les effets de transition de page */
+.page-transition {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.page-transition.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation pour les effets de notification toast */
+.toast {
+    animation: slideInFromRight 0.3s ease-out;
+}
+
+.toast.hide {
+    animation: slideOutToRight 0.3s ease-in;
+}
+
+@keyframes slideOutToRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* Animation pour les effets de menu mobile */
+.mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* Animation pour les effets de recherche */
+.search-expand {
+    width: 40px;
+    transition: width 0.3s ease;
+}
+
+.search-expand.expanded {
+    width: 300px;
+}
+
+/* Animation pour les effets de filtre */
+.filter-item {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+.filter-item.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animation pour les effets de countdown */
+.countdown {
+    animation: pulse 1s infinite;
+}
+
+/* Animation pour les effets de progress */
+.progress-circle {
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 1s ease;
+}
+
+/* Animation pour les effets de morphing */
+.morph {
+    transition: all 0.3s ease;
+}
+
+.morph:hover {
+    border-radius: 50%;
+}
+
+/* Animation pour les effets de glitch */
+.glitch {
+    position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch::before {
+    animation: glitch-1 0.5s infinite;
+    color: #00ffff;
+    z-index: -1;
+}
+
+.glitch::after {
+    animation: glitch-2 0.5s infinite;
+    color: #ff00ff;
+    z-index: -2;
+}
+
+@keyframes glitch-1 {
+    0%, 14%, 15%, 49%, 50%, 99%, 100% {
+        transform: translate(0);
+    }
+    15%, 49% {
+        transform: translate(-2px, 2px);
+    }
+}
+
+@keyframes glitch-2 {
+    0%, 20%, 21%, 62%, 63%, 99%, 100% {
+        transform: translate(0);
+    }
+    21%, 62% {
+        transform: translate(2px, -2px);
+    }
+} 

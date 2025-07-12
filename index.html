@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renaissance Espoir de Vie - ONG Humanitaire en Côte d'Ivoire</title>
+    <meta name="description" content="ONG humanitaire ivoirienne œuvrant pour la réinsertion sociale des femmes, veuves, orphelins et personnes vulnérables. Redonnons espoir ensemble.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="unified.css">
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div id="loader-overlay"><div class="loader-spinner"></div></div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.jpg" alt="Renaissance Espoir de Vie" class="logo">
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Accueil</a>
+                
+                <div class="nav-dropdown">
+                    <a href="apropos.html" class="nav-link">À propos <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="apropos.html">Présentation</a>
+                        <a href="apropos.html#notre-equipe">Notre équipe</a>
+                        <a href="apropos.html#nos-valeurs">Nos valeurs</a>
+                        <a href="apropos.html#notre-histoire">Notre histoire</a>
+                    </div>
+                </div>
+                
+                <div class="nav-dropdown">
+                    <a href="actions.html" class="nav-link">Nos actions <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="actions.html">Toutes nos actions</a>
+                        <a href="actions.html#education">Éducation</a>
+                        <a href="actions.html#sante">Santé</a>
+                        <a href="actions.html#femmes">Promotion de la femme</a>
+                        <a href="actions.html#enfants">Enfants de la rue</a>
+                        <a href="actions.html#veuves">Aide aux veuves</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nav-buttons">
+                <a href="#volunteer" class="btn btn-secondary">Devenir bénévole</a>
+                <a href="#donate" class="btn btn-primary">Faire un don</a>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <video autoplay muted loop class="hero-video">
+                <source src="images/bg-tous.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title animate-fade-in">
+                    <span class="highlight">Redonnons</span> espoir ensemble
+                </h1>
+                <p class="hero-subtitle animate-fade-in-delay">
+                    Accompagnons les femmes, veuves, orphelins et personnes vulnérables vers une nouvelle vie digne en Côte d'Ivoire
+                </p>
+                <div class="hero-buttons animate-fade-in-delay-2">
+                    <a href="actions.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-heart"></i>
+                        Découvrir nos actions
+                    </a>
+                    <a href="#donate" class="btn btn-outline btn-large">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        Nous soutenir
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Statistiques -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item highlighted animate-on-scroll">
+                    <div class="stat-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <div class="stat-number" data-target="300">0</div>
+                    <div class="stat-label">Femmes accompagnées</div>
+                </div>
+                
+                <div class="stat-item highlighted animate-on-scroll">
+                    <div class="stat-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <div class="stat-number" data-target="120">0</div>
+                    <div class="stat-label">Enfants formés</div>
+                </div>
+                
+                <div class="stat-item highlighted animate-on-scroll">
+                    <div class="stat-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Familles soutenues</div>
+                </div>
+                
+                <div class="stat-item highlighted animate-on-scroll">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-target="25">0</div>
+                    <div class="stat-label">Bénévoles actifs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos rapide -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title animate-on-scroll">Qui sommes-nous ?</h2>
+                    <p class="section-description animate-on-scroll">
+                        <strong>Renaissance Espoir de Vie</strong> est une ONG humanitaire ivoirienne née de la conviction que chaque personne mérite une seconde chance. Nous œuvrons pour la réinsertion sociale et le soutien des populations les plus vulnérables de notre société.
+                    </p>
+                    <p class="section-description animate-on-scroll">
+                        Notre mission est de redonner espoir, offrir des formations professionnelles, créer des opportunités d'emploi et accompagner vers une nouvelle vie digne.
+                    </p>
+                    <a href="apropos.html" class="btn btn-primary animate-on-scroll">
+                        En savoir plus
+                    </a>
+                </div>
+                <div class="about-image animate-on-scroll">
+                    <img src="images/nous.jpg" alt="Équipe de l'ONG" class="rounded-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actions principales -->
+    <section class="main-actions">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Projets en cours</h2>
+            <p class="section-description text-center animate-on-scroll">
+                Nos programmes actifs qui transforment des vies au quotidien
+            </p>
+            <div class="actions-grid">
+                <div class="action-card animate-on-scroll">
+                    <div class="action-image">
+                        <img src="images/veuve.jpg" alt="Soutien aux veuves">
+                    </div>
+                    <div class="action-content">
+                        <h3>💜 Soutien aux veuves - Solidarité et espoir</h3>
+                        <p>Nous offrons un accompagnement moral, un soutien financier, et des opportunités pour reconstruire leur vie avec dignité.</p>
+                        <a href="#" class="action-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="action-card animate-on-scroll">
+                    <div class="action-image">
+                        <img src="images/actions.jpg" alt="Dans les médias">
+                    </div>
+                    <div class="action-content">
+                        <h3>📰 Dans les médias</h3>
+                        <p>Notre action a été mise en lumière par Fraternité Matin. Découvrez l'article du 22 mars 2024.</p>
+                        <a href="#" class="action-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="action-card animate-on-scroll">
+                    <div class="action-image">
+                        <img src="images/Enfant de la rue.jpg" alt="Offrons un avenir aux enfants démunis">
+                    </div>
+                    <div class="action-content">
+                        <h3>📚 Offrons un avenir aux enfants démunis</h3>
+                        <p>Chaque enfant mérite une éducation. Nous aidons les enfants défavorisés à commencer l'année scolaire avec des fournitures scolaires et un soutien.</p>
+                        <a href="#" class="action-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Ils nous font confiance</h2>
+            <p class="section-description text-center animate-on-scroll">
+                Découvrez les témoignages touchants de ceux que nous accompagnons
+            </p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-frame">
+                        <div class="testimonial-image-circle">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                                <p>"Grâce à Renaissance Espoir de Vie, j'ai pu apprendre la couture et maintenant je gagne ma vie dignement. Je peux enfin subvenir aux besoins de mes enfants."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <h4>Fatou, 32 ans</h4>
+                                <span>Bénéficiaire du programme de formation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-frame">
+                        <div class="testimonial-image-circle">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                                <p>"L'ONG m'a redonné espoir quand j'avais tout perdu. Aujourd'hui, je suis autonome et je peux aider d'autres personnes dans le besoin."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <h4>Aminata, 45 ans</h4>
+                                <span>Veuve accompagnée</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-frame">
+                        <div class="testimonial-image-circle">
+                            <i class="fas fa-male"></i>
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                                <p>"Je suis orphelin et l'ONG m'a offert une éducation et un toit. Maintenant je veux devenir médecin pour aider les autres à mon tour."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <h4>Kouassi, 16 ans</h4>
+                                <span>Orphelin pris en charge</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-frame">
+                        <div class="testimonial-image-circle">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                                <p>"Grâce au micro-crédit, j'ai pu créer ma petite entreprise de vente de beignets. Maintenant je peux nourrir ma famille et payer les frais scolaires."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <h4>Mariam, 38 ans</h4>
+                                <span>Bénéficiaire micro-crédit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Événements à venir -->
+    <section class="upcoming-events">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Événements à venir</h2>
+            <p class="section-description text-center animate-on-scroll">
+                Découvrez nos prochains événements et participez à nos actions
+            </p>
+            
+            <div class="events-grid">
+                <div class="event-card animate-on-scroll">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Journée de l'espoir">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">Déc</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Journée de l'espoir</h3>
+                            <p class="event-description">
+                                Grande journée de célébration et de partage avec nos bénéficiaires et partenaires.
+                            </p>
+                            <div class="event-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>10h00 - 18h00</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Centre de l'ONG, Cocody</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>500+ participants attendus</span>
+                                </div>
+                            </div>
+                            <div class="event-actions">
+                                <button class="btn btn-primary">S'inscrire</button>
+                                <button class="btn btn-outline">En savoir plus</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card animate-on-scroll">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Formation bénévoles">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <span class="day">22</span>
+                            <span class="month">Déc</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Formation des nouveaux bénévoles</h3>
+                            <p class="event-description">
+                                Session de formation pour les nouveaux bénévoles : découverte de nos programmes et méthodologies d'accompagnement.
+                            </p>
+                            <div class="event-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>14h00 - 18h00</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Centre de l'ONG, Cocody</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>25 places disponibles</span>
+                                </div>
+                            </div>
+                            <div class="event-actions">
+                                <button class="btn btn-primary">S'inscrire</button>
+                                <button class="btn btn-outline">En savoir plus</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card animate-on-scroll">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1000&q=80" alt="Collecte de dons" onerror="this.src='images/donation.jpg'; this.onerror=null;">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <span class="day">28</span>
+                            <span class="month">Déc</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Collecte de dons en nature</h3>
+                            <p class="event-description">
+                                Grande collecte de vêtements, jouets et denrées alimentaires pour les familles en difficulté.
+                            </p>
+                            <div class="event-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>10h00 - 16h00</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Centre commercial Riviera 2</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Ouvert à tous</span>
+                                </div>
+                            </div>
+                            <div class="event-actions">
+                                <button class="btn btn-primary">Participer</button>
+                                <button class="btn btn-outline">En savoir plus</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Interview du Président sur 7info -->
+    <section class="president-interview">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Interview du Président sur 7info</h2>
+            <p class="section-description text-center animate-on-scroll">
+                Découvrez l'interview de notre président sur la lutte contre la prostitution
+            </p>
+            
+            <div class="video-container animate-on-scroll" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
+                    <iframe 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
+                        src="https://www.youtube.com/embed/TwtDwrjenmg?si=MFb7nIRfiF8ebv1g" 
+                        title="Interview du Président sur 7info - Lutte contre la prostitution" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre Équipe -->
+    <section class="our-team">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Notre Équipe</h2>
+            <p class="section-description text-center animate-on-scroll">
+                Des professionnels dévoués et passionnés par l'action humanitaire
+            </p>
+            
+            <div class="team-grid">
+                <div class="team-member animate-on-scroll">
+                    <div class="member-image" style="width:120px;height:120px;">
+                        <img src="images/equipe1.png" alt="Membre équipe 1">
+                    </div>
+                    <div class="member-info">
+                        <h3>M. SANGARE Aboubacar</h3>
+                        <span class="member-role">PRÉSIDENT</span>
+                        <p>Membre dévoué de notre équipe, contribuant activement à nos missions humanitaires.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member animate-on-scroll">
+                    <div class="member-image" style="width:120px;height:120px;">
+                        <img src="images/equipe1.1.jpg" alt="Membre équipe 2">
+                    </div>
+                    <div class="member-info">
+                        <h3>Mme KOFFI Victorine Agbodja</h3>
+                        <span class="member-role">VICE PRÉSIDENTE</span>
+                        <p>Membre engagé de notre équipe, participant aux programmes de développement communautaire.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member animate-on-scroll">
+                    <div class="member-image" style="width:120px;height:120px;">
+                        <img src="images/equipe2.jpg" alt="Membre équipe 3">
+                    </div>
+                    <div class="member-info">
+                        <h3>Mme KONE K. HAdja</h3>
+                        <span class="member-role">SECRÉTAIRE GÉNÉRALE</span>
+                        <p>Membre passionné de notre équipe, œuvrant pour l'amélioration des conditions de vie.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member animate-on-scroll">
+                    <div class="member-image" style="width:120px;height:120px;">
+                        <img src="images/equipe3.png" alt="Membre équipe 4">
+                    </div>
+                    <div class="member-info">
+                        <h3>M. KONE Kolotioloma Mamadou</h3>
+                        <span class="member-role">TRÉSORIER GÉNÉRAL</span>
+                        <p>Membre dédié de notre équipe, contribuant à nos actions de solidarité.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member animate-on-scroll">
+                    <div class="member-image" style="width:120px;height:120px;">
+                        <img src="images/equipe18.jpg" alt="Membre équipe 5">
+                    </div>
+                    <div class="member-info">
+                        <h3>M. KOUAME KOBENAN Emmanuel</h3>
+                        <span class="member-role">TRÉSORIER GÉNÉRAL ADJOINT</span>
+                        <p>Membre actif de notre équipe, participant aux programmes d'accompagnement.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member animate-on-scroll">
+                    <div class="member-image" style="width:120px;height:120px;">
+                        <img src="images/equipe4.jpg" alt="Membre équipe 6">
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr DIABAGATÉ Mariam</h3>
+                        <span class="member-role">RESPONSABLE DÉPARTEMENT SANTE</span>
+                        <p>Membre engagé de notre équipe, contribuant à nos missions sociales.</p>
+                    </div>
+                </div>
+                <div class="team-member animate-on-scroll">
+                    <div class="member-image" style="width:120px;height:120px;">
+                        <img src="images/equipe7.jpg" alt="Membre équipe 7">
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr KASSI Brigitte</h3>
+                        <span class="member-role">RESPONSABLE ADJOINT DÉPARTEMENT SANTE</span>
+                        <p>Membre dévoué de notre équipe, participant aux actions de développement.</p>
+                    </div>
+                </div>
+                <div class="team-member animate-on-scroll">
+                    <div class="member-image" style="width:120px;height:120px;">
+                        <img src="images/equipe5.png" alt="Membre équipe 9">
+                    </div>
+                    <div class="member-info">
+                        <h3>M. KONÉ Bazoumana</h3>
+                        <span class="member-role">RESPONSABLE DÉPARTEMENT ÉDUCATION</span>
+                        <p>Membre passionné de notre équipe, œuvrant pour le bien-être communautaire.</p>
+                    </div>
+                </div>
+                <div class="team-member animate-on-scroll">
+                    <div class="member-image" style="width:120px;height:120px;">
+                        <img src="images/equipe6.jpg" alt="Membre équipe 18">
+                    </div>
+                    <div class="member-info">
+                        <h3>Mme CADJA ATTEBY Mireille</h3>
+                        <span class="member-role">CHARGÉE DE LA PROMOTION DE LA FEMME ET DE LA RECONVERSION PROFESSIONNELLE</span>
+                        <p>Membre actif de notre équipe, contribuant à nos programmes d'aide.</p>
+                    </div>
+                    
+                </div>
+                <div class="team-member animate-on-scroll">
+                    <div class="member-image" style="width:120px;height:120px;">
+                        <img src="images/equipe9.jpg" alt="Membre équipe 18">
+                    </div>
+                    <div class="member-info">
+                        <h3>Mme SAHIÉ Esther</h3>
+                        <span class="member-role">CHARGÉE DES RELATIONS EXTÉRIEURES</span>
+                        <p>Membre actif de notre équipe, contribuant à nos programmes d'aide.</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Nos Partenaires -->
+    <section class="our-partners">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Nos Partenaires</h2>
+            <p class="section-description text-center animate-on-scroll">
+                Nous collaborons avec des organisations locales et internationales pour maximiser notre impact
+            </p>
+            
+            <div class="partners-grid">
+                <div class="partner-logo animate-on-scroll">
+                    <img src="images/partenaire1.jpg" alt="Partenaire 1">
+                    <h4>Partenaire 1</h4>
+        
+                </div>
+                <div class="partner-logo animate-on-scroll">
+                    <img src="images/partenaire2.jpg" alt="Partenaire 2">
+                    <h4>Partenaire 2</h4>
+                
+                </div>
+                <div class="partner-logo animate-on-scroll">
+                    <img src="images/partenaire3.jpg" alt="Partenaire 3">
+                    <h4>Partenaire 3</h4>
+                    
+                </div>
+                <div class="partner-logo animate-on-scroll">
+                    <img src="images/partenaire4.jpg" alt="Partenaire 4">
+                    <h4>Partenaire 4</h4>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Devenir Bénévole -->
+    <section class="volunteer-section" id="volunteer">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Devenir Bénévole</h2>
+            <p class="section-description text-center animate-on-scroll">
+                Rejoignez notre équipe de bénévoles et participez à nos missions humanitaires
+            </p>
+            
+            <div class="volunteer-content">
+                <div class="volunteer-info">
+                    <div class="volunteer-card animate-on-scroll">
+                        <div class="volunteer-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Comment nous aider ?</h3>
+                        <p>Vous pouvez nous aider de plusieurs façons : accompagnement des bénéficiaires, formation, collecte de dons, organisation d'événements, etc.</p>
+                    </div>
+                    
+                    <div class="volunteer-card animate-on-scroll">
+                        <div class="volunteer-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Flexibilité</h3>
+                        <p>Nous adaptons nos horaires selon vos disponibilités. Vous pouvez nous aider quelques heures par semaine ou plus selon vos possibilités.</p>
+                    </div>
+                    
+                    <div class="volunteer-card animate-on-scroll">
+                        <div class="volunteer-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Formation offerte</h3>
+                        <p>Nous vous formons gratuitement aux techniques d'accompagnement et aux spécificités de nos programmes avant de commencer.</p>
+                    </div>
+                </div>
+                
+                <div class="volunteer-form-section">
+                    <form id="volunteerForm" class="volunteer-form animate-on-scroll">
+                        <h3>Formulaire de candidature bénévole</h3>
+                        <div id="volunteerMessage" class="form-message" style="display: none;"></div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="volunteer-name">Nom complet *</label>
+                                <input type="text" id="volunteer-name" name="nom" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="volunteer-email">Email *</label>
+                                <input type="email" id="volunteer-email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="volunteer-phone">Téléphone *</label>
+                                <input type="tel" id="volunteer-phone" name="telephone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="volunteer-age">Âge</label>
+                                <input type="number" id="volunteer-age" name="age" min="18" max="100">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="volunteer-availability">Disponibilités *</label>
+                            <select id="volunteer-availability" name="disponibilite" required>
+                                <option value="">Sélectionnez vos disponibilités</option>
+                                <option value="weekdays">En semaine</option>
+                                <option value="weekends">Weekends</option>
+                                <option value="evenings">Soirées</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="volunteer-skills">Compétences/Expériences</label>
+                            <textarea id="volunteer-skills" name="competences" rows="3" placeholder="Décrivez vos compétences, expériences ou motivations..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="volunteer-motivation">Motivation *</label>
+                            <textarea id="volunteer-motivation" name="motivation" rows="4" required placeholder="Pourquoi souhaitez-vous devenir bénévole avec nous ?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large" id="volunteerSubmit">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer ma candidature
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faire un Don -->
+    <section class="donate-section" id="donate">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Faire un Don</h2>
+            <p class="section-description text-center animate-on-scroll">
+                Votre don nous aide à continuer nos actions humanitaires et à soutenir les plus vulnérables
+            </p>
+            
+            <div class="donate-content">
+                <div class="donate-info">
+                    <div class="donate-card animate-on-scroll">
+                        <div class="donate-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #FF8C00, #009639); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-chart-line" style="font-size: 32px; color: white;"></i>
+                        </div>
+                        <h3>Impact de votre don</h3>
+                        <p>Chaque don, quel que soit le montant, contribue directement à nos programmes d'aide aux femmes, enfants et familles en difficulté.</p>
+                    </div>
+                    
+                    <div class="donate-card animate-on-scroll">
+                        <div class="donate-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #FF8C00, #009639); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-eye" style="font-size: 32px; color: white;"></i>
+                        </div>
+                        <h3>Transparence</h3>
+                        <p>Nous nous engageons à utiliser vos dons de manière transparente et efficace pour maximiser leur impact sur le terrain.</p>
+                    </div>
+                    
+                    <div class="donate-card animate-on-scroll">
+                        <div class="donate-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #FF8C00, #009639); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-award" style="font-size: 32px; color: white;"></i>
+                        </div>
+                        <h3>Reconnaissance</h3>
+                        <p>Nous tenons à remercier chaque donateur et à lui rendre compte de l'utilisation de son don.</p>
+                    </div>
+                </div>
+                
+                <div class="payment-methods">
+                    <h3 class="text-center animate-on-scroll">Moyens de paiement</h3>
+                    
+                    <div class="payment-grid">
+                        <div class="payment-method animate-on-scroll">
+                                                    <div class="payment-icon">
+                            <img src="images/wave.png" alt="Wave">
+                        </div>
+                            <h4>Wave</h4>
+                            <p class="payment-number">+225 07 49 32 92 29</p>
+                            <p class="payment-note">Transfert d'argent</p>
+                        </div>
+                        
+                        <div class="payment-method animate-on-scroll">
+                                                    <div class="payment-icon">
+                            <img src="images/orange-money.jpg" alt="Orange Money">
+                        </div>
+                            <h4>Orange Money</h4>
+                            <p class="payment-number">+225 07 07 90 23 17</p>
+                            <p class="payment-note">Transfert d'argent</p>
+                        </div>
+                        
+                        <div class="payment-method animate-on-scroll">
+                                                    <div class="payment-icon">
+                            <img src="images/transaction.png" alt="MTN MoMo">
+                        </div>
+                            <h4>MTN MoMo</h4>
+                            <p class="payment-number">+225 05 05 67 72 39</p>
+                            <p class="payment-note">Transfert d'argent</p>
+                        </div>
+                        
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title text-center animate-on-scroll">Contactez-nous</h2>
+            <p class="section-description text-center animate-on-scroll">
+                Nous sommes là pour vous écouter et répondre à vos questions
+            </p>
+            
+            <div class="contact-content">
+                <div class="contact-info-section">
+                    <div class="contact-item animate-on-scroll">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Téléphone</h3>
+                            <p>+225 07 07 90 23 17</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item animate-on-scroll">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>renaissanceespoirdevie@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item animate-on-scroll">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Adresse</h3>
+                            <p>Riviera Attoban, face Église Saint Bernard<br>Abidjan, Côte d'Ivoire</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-section">
+                    <form id="contactForm" class="contact-form animate-on-scroll">
+                        <div id="contactMessage" class="form-message" style="display: none;"></div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nom complet *</label>
+                                <input type="text" id="name" name="nom" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <input type="text" id="subject" name="sujet" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large" id="contactSubmit">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title animate-on-scroll">Rejoignez notre mission</h2>
+                <p class="cta-description animate-on-scroll">
+                    Ensemble, nous pouvons transformer des vies et redonner espoir à ceux qui en ont le plus besoin. 
+                    Chaque don, chaque heure de bénévolat compte.
+                </p>
+                <div class="cta-buttons animate-on-scroll">
+                    <a href="#contact" class="btn btn-primary btn-large">
+                        <i class="fas fa-hands-helping"></i>
+                        Devenir bénévole
+                    </a>
+                    <a href="#donate" class="btn btn-outline btn-large">
+                        <i class="fas fa-heart"></i>
+                        Faire un don
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets en cours -->
+    <section class="current-projects">
+      <div class="container">
+        <h2 class="section-title text-center animate-on-scroll">Projets en cours</h2>
+        <p class="section-description text-center animate-on-scroll">
+          Nos programmes actifs qui transforment des vies au quotidien
+        </p>
+        <div class="filters">
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Tous les projets</button>
+            <button class="filter-btn" data-filter="formation">Formation</button>
+            <button class="filter-btn" data-filter="soutien">Soutien</button>
+            <button class="filter-btn" data-filter="enfants">Enfants</button>
+            <button class="filter-btn" data-filter="femmes">Femmes</button>
+            <button class="filter-btn" data-filter="education">Éducation</button>
+            <button class="filter-btn" data-filter="sante">Santé</button>
+            <button class="filter-btn" data-filter="media">Médias</button>
+            <button class="filter-btn" data-filter="psychologie">Psychologie</button>
+          </div>
+        </div>
+        <div class="projects-grid">
+          <!-- Action 1 : 💜 Soutien aux veuves -->
+          <div class="project-card animate-on-scroll" data-category="soutien femmes">
+            <div class="project-image">
+              <img src="images/veuve.jpg" alt="Soutien aux veuves">
+              <div class="project-status active">En cours</div>
+            </div>
+            <div class="project-content">
+              <h3>💜 Soutien aux veuves - Solidarité et espoir</h3>
+              <p>Nous offrons un accompagnement moral, un soutien financier, et des opportunités pour reconstruire leur vie avec dignité.</p>
+              <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
+          <!-- Action 2 : 📰 Dans les médias -->
+          <div class="project-card animate-on-scroll" data-category="media">
+            <div class="project-image">
+              <img src="images/actions.jpg" alt="Dans les médias">
+              <div class="project-status active">En cours</div>
+            </div>
+            <div class="project-content">
+              <h3>📰 Dans les médias</h3>
+              <p>Notre action a été mise en lumière par Fraternité Matin. Découvrez l'article du 22 mars 2024.</p>
+              <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
+          <!-- Action 3 : 📚 Offrons un avenir aux enfants démunis -->
+          <div class="project-card animate-on-scroll" data-category="education enfants">
+            <div class="project-image">
+              <img src="images/Enfant de la rue.jpg" alt="Offrons un avenir aux enfants démunis">
+              <div class="project-status active">En cours</div>
+            </div>
+            <div class="project-content">
+              <h3>📚 Offrons un avenir aux enfants démunis</h3>
+              <p>Chaque enfant mérite une éducation. Nous aidons les enfants défavorisés à commencer l'année scolaire avec des fournitures scolaires et un soutien.</p>
+              <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
+          <!-- Action 4 : Luttons contre l’exploitation et le travail du sexe -->
+          <div class="project-card animate-on-scroll" data-category="soutien femmes">
+            <div class="project-image">
+              <img src="images/travailleur du sexe.jpg" alt="Lutter contre l'exploitation">
+              <div class="project-status active">En cours</div>
+            </div>
+            <div class="project-content">
+              <h3>Luttons contre l’exploitation et le travail du sexe</h3>
+              <p>Sensibilisons et agissons pour offrir des alternatives dignes et protéger les personnes les plus à risque.</p>
+              <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
+          <!-- Action 5 : 🧠 Soutien psychologique pour un avenir meilleur -->
+          <div class="project-card animate-on-scroll" data-category="psychologie">
+            <div class="project-image">
+              <img src="images/person-sharing-feelings-emotions-therapy-session.jpg" alt="Accompagnement psychologique">
+              <div class="project-status active">En cours</div>
+            </div>
+            <div class="project-content">
+              <h3>🧠 Soutien psychologique pour un avenir meilleur</h3>
+              <p>Offrons un accompagnement psychologique pour aider ceux qui souffrent à retrouver l'espoir et la sérénité.</p>
+              <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
+          <!-- Action 6 : 🏥 Don d’équipements médicaux pour un accès aux soins amélioré -->
+          <div class="project-card animate-on-scroll" data-category="sante">
+            <div class="project-image">
+              <img src="images/equipement.jpg" alt="Don d'équipements médicaux">
+              <div class="project-status active">En cours</div>
+            </div>
+            <div class="project-content">
+              <h3>🏥 Don d’équipements médicaux pour un accès aux soins amélioré</h3>
+              <p>Distribution d'équipements médicaux essentiels pour améliorer l'accès aux soins.</p>
+              <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
+          <!-- Action 7 : Notre engagement médiatisé -->
+          <div class="project-card animate-on-scroll" data-category="media">
+            <div class="project-image">
+              <img src="images/INTERVIEW.jpg" alt="Interviews">
+              <div class="project-status active">En cours</div>
+            </div>
+            <div class="project-content">
+              <h3>Notre engagement médiatisé</h3>
+              <p>Mise en avant par 7info et Les femmes d'ici sur NCI pour notre lutte contre la prostitution.</p>
+              <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
+          <!-- Action 8 : Favorisons l'accès à l'éducation pour tous -->
+          <div class="project-card animate-on-scroll" data-category="education">
+            <div class="project-image">
+              <img src="images/education.jpg" alt="Favoriser l'accès à l'éducation">
+              <div class="project-status active">En cours</div>
+            </div>
+            <div class="project-content">
+              <h3>Favorisons l'accès à l'éducation pour tous</h3>
+              <p>Nous nous engageons à offrir des opportunités éducatives à tous.</p>
+              <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
+          <!-- Action 9 : Soutien à l'éducation des enfants -->
+          <div class="project-card animate-on-scroll" data-category="education enfants">
+            <div class="project-image">
+              <img src="images/donation.jpg" alt="Livres scolaires">
+              <div class="project-status active">En cours</div>
+            </div>
+            <div class="project-content">
+              <h3>Soutien à l'éducation des enfants</h3>
+              <p>Grâce à vos contributions, nous avons offert des livres scolaires à des élèves de CP2 et CM1.</p>
+              <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
+          <!-- Action 10 : Participation au FestiCharité 2023 -->
+          <div class="project-card animate-on-scroll" data-category="femmes">
+            <div class="project-image">
+              <img src="images/diplome.jpg" alt="Diplôme d'honneur">
+              <div class="project-status active">En cours</div>
+            </div>
+            <div class="project-content">
+              <h3>Participation au FestiCharité 2023</h3>
+              <p>Nous avons reçu un diplôme d’honneur pour nos actions en faveur des femmes vulnérables.</p>
+              <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.jpg" alt="Renaissance Espoir de Vie" class="logo">
+                    </div>
+                    <p>ONG humanitaire ivoirienne œuvrant pour la réinsertion sociale et le soutien des populations vulnérables.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100068930508433" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/2250707902317" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="actions.html">Nos actions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Agir avec nous</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Devenir bénévole</a></li>
+                        <li><a href="#donate">Faire un don</a></li>
+                        <li><a href="#contact">Nous contacter</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +225 07 07 90 23 17</p>
+                        <p><i class="fas fa-envelope"></i> renaissanceespoirdevie@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Riviera Attoban, face Église Saint Bernard<br>Abidjan, Côte d'Ivoire</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Renaissance Espoir de Vie. Tous droits réservés.</p>
+                <p>Développé par <a href="https://ouattara4349.github.io/ouattara4349/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Ouattara</a></p>
+                <div class="footer-bottom-links">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+    <script src="animations.js"></script>
+    <!-- Debug (temporaire) -->
+    <script src="debug.js"></script>
+    
+    <!-- EmailJS Configuration et Gestion des Formulaires -->
+    <script>
+        // Initialisation d'EmailJS
+        (function() {
+            emailjs.init("nZYZOsyl1MGMrUd1R"); // Clé publique EmailJS
+        })();
+
+        // Fonction pour afficher les messages
+        function showMessage(elementId, message, isSuccess = true) {
+            const messageElement = document.getElementById(elementId);
+            messageElement.textContent = message;
+            messageElement.className = `form-message ${isSuccess ? 'success' : 'error'}`;
+            messageElement.style.display = 'block';
+            
+            setTimeout(() => {
+                messageElement.style.display = 'none';
+            }, 5000);
+        }
+
+        // Gestion du formulaire de bénévole
+        document.getElementById('volunteerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('volunteerSubmit');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+            submitBtn.disabled = true;
+
+            const formData = {
+                nom: document.getElementById('volunteer-name').value,
+                email: document.getElementById('volunteer-email').value,
+                telephone: document.getElementById('volunteer-phone').value,
+                age: document.getElementById('volunteer-age').value,
+                disponibilite: document.getElementById('volunteer-availability').value,
+                competences: document.getElementById('volunteer-skills').value,
+                motivation: document.getElementById('volunteer-motivation').value
+            };
+
+            // Envoi via EmailJS (remplacez par vos paramètres)
+            emailjs.send('service_bopookk', 'template_j39ncbs', formData)
+                .then(function(response) {
+                    showMessage('volunteerMessage', 'Votre candidature a été envoyée avec succès ! Nous vous contacterons bientôt.', true);
+                    document.getElementById('volunteerForm').reset();
+                    setTimeout(() => {
+                        window.location.href = 'merci.html';
+                    }, 2000);
+                })
+                .catch(function(error) {
+                    showMessage('volunteerMessage', 'Erreur lors de l\'envoi. Veuillez réessayer ou nous contacter directement.', false);
+                })
+                .finally(function() {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+
+        // Gestion du formulaire de don
+        const donateForm = document.getElementById('donateForm');
+        if (donateForm) {
+            donateForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const submitBtn = document.getElementById('donateSubmit');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+                submitBtn.disabled = true;
+                const formData = {
+                    nom: document.getElementById('donor-name').value,
+                    email: document.getElementById('donor-email').value,
+                    type_don: document.getElementById('donation-type').value,
+                    message: document.getElementById('donation-message').value
+                };
+                emailjs.send('service_bopookk', 'template_don', formData)
+                    .then(function(response) {
+                        showMessage('donateMessage', 'Votre don a été enregistré avec succès ! Merci pour votre générosité.', true);
+                        document.getElementById('donateForm').reset();
+                        setTimeout(() => {
+                            window.location.href = 'merci.html';
+                        }, 2000);
+                    })
+                    .catch(function(error) {
+                        showMessage('donateMessage', 'Erreur lors de l\'envoi. Veuillez réessayer ou nous contacter directement.', false);
+                    })
+                    .finally(function() {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    });
+            });
+        }
+
+        // Gestion du formulaire de contact
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('contactSubmit');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+            submitBtn.disabled = true;
+
+            const formData = {
+                nom: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                sujet: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            emailjs.send('service_bopookk', 'template_lvbio5g', formData)
+                .then(function(response) {
+                    showMessage('contactMessage', 'Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.', true);
+                    document.getElementById('contactForm').reset();
+                    setTimeout(() => {
+                        window.location.href = 'merci.html';
+                    }, 2000);
+                })
+                .catch(function(error) {
+                    showMessage('contactMessage', 'Erreur lors de l\'envoi. Veuillez réessayer ou nous contacter directement.', false);
+                })
+                .finally(function() {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+</body>
+</html> 
