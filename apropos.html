@@ -9,21 +9,23 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Optimisé -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome - Optimisé -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="unified.css">
+    
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
 </head>
 <body>
-    <div id="loader-overlay"><div class="loader-spinner"></div></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -33,28 +35,10 @@
             
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Accueil</a>
-                
-                <div class="nav-dropdown">
-                    <a href="apropos.html" class="nav-link active">À propos <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="apropos.html">Présentation</a>
-                        <a href="apropos.html#notre-equipe">Notre équipe</a>
-                        <a href="apropos.html#nos-valeurs">Nos valeurs</a>
-                        <a href="apropos.html#notre-histoire">Notre histoire</a>
-                    </div>
-                </div>
-                
-                <div class="nav-dropdown">
-                    <a href="actions.html" class="nav-link">Nos actions <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="actions.html">Toutes nos actions</a>
-                        <a href="actions.html#education">Éducation</a>
-                        <a href="actions.html#sante">Santé</a>
-                        <a href="actions.html#femmes">Promotion de la femme</a>
-                        <a href="actions.html#enfants">Enfants de la rue</a>
-                        <a href="actions.html#veuves">Aide aux veuves</a>
-                    </div>
-                </div>
+                <a href="apropos.html" class="nav-link active">À propos</a>
+                <a href="actions.html" class="nav-link">Nos actions</a>
+                <a href="index.html#volunteer" class="btn btn-secondary nav-mobile-btn">Devenir bénévole</a>
+                <a href="index.html#donate" class="btn btn-primary nav-mobile-btn">Faire un don</a>
             </div>
             
             <div class="nav-buttons">
@@ -73,82 +57,175 @@
     <!-- Hero Section -->
     <section class="page-hero">
         <div class="hero-background">
-                            <img src="images/african-children-enjoying-life.jpg" alt="Équipe de l'ONG">
+            <img src="images/african-children-enjoying-life.jpg" alt="Équipe de l'ONG">
             <div class="hero-overlay"></div>
         </div>
         
         <div class="hero-content">
             <div class="container">
-                <h1 class="hero-title animate-fade-in">Qui sommes-nous ?</h1>
-                <p class="hero-subtitle animate-fade-in-delay">
+                <div class="hero-badge" data-scroll-reveal="fade-up">
+                    <i class="fas fa-heart"></i>
+                    Qui sommes-nous ?
+                </div>
+                <h1 class="hero-title" data-scroll-reveal="fade-up" data-scroll-reveal-delay="200">Notre Histoire</h1>
+                <p class="hero-subtitle" data-scroll-reveal="fade-up" data-scroll-reveal-delay="400">
                     Découvrez l'histoire et la mission de Renaissance Espoir de Vie
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- À propos de nous -->
-    <section class="our-story">
+    <!-- Notre Histoire -->
+    <section class="about-story">
         <div class="container">
-            <div class="story-content">
-                <div class="story-text">
-                    <h2 class="section-title animate-on-scroll">À propos de nous</h2>
-                    <p class="story-description animate-on-scroll">
-                        L'ONG <strong>Renaissance Espoir de Vie</strong> a été fondée pour apporter un changement durable dans les communautés les plus vulnérables. Nous œuvrons pour améliorer les conditions de vie des enfants et des familles à travers diverses initiatives sociales, éducatives et sanitaires.
-                    </p>
-                    <p class="story-description animate-on-scroll">
-                        Notre mission est d'offrir un espoir de vie à travers l'éducation, la santé et le développement durable. Nous croyons en l'égalité des chances et en la création de solutions à long terme pour les générations futures.
-                    </p>
-                    <p class="story-description animate-on-scroll">
-                        Chaque projet est conçu pour soutenir la croissance des communautés et offrir des opportunités aux enfants afin qu'ils puissent atteindre leur plein potentiel.
-                    </p>
+            <div class="story-header" data-scroll-reveal="fade-up">
+                <div class="story-badge">
+                    <i class="fas fa-history"></i>
+                    Notre Histoire
                 </div>
-                <div class="story-image animate-on-scroll">
-                    <img src="images/apropos de nous.jpg" alt="À propos de Renaissance Espoir de Vie" class="rounded-image">
+                <h2 class="section-title">Une mission née de la compassion</h2>
+                <p class="section-description">
+                    Découvrez comment Renaissance Espoir de Vie est devenue un phare d'espoir pour les plus vulnérables
+                </p>
+            </div>
+            
+            <div class="story-content">
+                <div class="story-text" data-scroll-reveal="fade-right">
+                    <div class="story-card">
+                        <div class="story-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Notre Fondation</h3>
+                        <p>L'ONG <strong>Renaissance Espoir de Vie</strong> a été fondée avec une vision claire : apporter un changement durable dans les communautés les plus vulnérables de Côte d'Ivoire. Notre histoire commence par une simple conviction : chaque personne mérite une seconde chance.</p>
+                        <div class="story-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-calendar"></i>
+                                Fondée en 2020
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card">
+                        <div class="story-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Notre Évolution</h3>
+                        <p>Depuis notre création, nous avons accompagné des centaines de femmes, d'enfants et de familles vers une vie meilleure. Chaque projet, chaque action, chaque sourire redonné nous conforte dans notre mission.</p>
+                        <div class="story-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-chart-line"></i>
+                                Croissance continue
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card">
+                        <div class="story-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Notre Impact</h3>
+                        <p>Nous œuvrons pour améliorer les conditions de vie à travers des initiatives sociales, éducatives et sanitaires. Notre approche holistique permet de créer des solutions durables pour les générations futures.</p>
+                        <div class="story-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-award"></i>
+                                Impact reconnu
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-story-image-full">
+                    <img src="images/apropos de nous.jpg" alt="Notre équipe en action">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Notre Mission -->
-    <section class="our-mission">
+    <section class="about-mission">
         <div class="container">
-            <h2 class="section-title text-center animate-on-scroll">Notre Mission</h2>
-            <p class="section-description text-center animate-on-scroll">
-                Nous œuvrons pour la réinsertion sociale et le soutien des populations les plus vulnérables de Côte d'Ivoire
-            </p>
+            <div class="mission-header" data-scroll-reveal="fade-up">
+                <div class="mission-badge">
+                    <i class="fas fa-bullseye"></i>
+                    Notre Mission
+                </div>
+                <h2 class="section-title">Transformer des vies, créer de l'espoir</h2>
+                <p class="section-description">
+                    Nous œuvrons pour la réinsertion sociale et le soutien des populations les plus vulnérables de Côte d'Ivoire
+                </p>
+            </div>
             
             <div class="mission-grid">
-                <div class="mission-card animate-on-scroll">
+                <div class="mission-card" data-scroll-reveal="fade-up">
                     <div class="mission-icon">
                         <i class="fas fa-heart"></i>
                     </div>
                     <h3>Accompagner</h3>
-                    <p>Nous accompagnons les femmes en situation de prostitution, les veuves et les orphelins vers une nouvelle vie digne.</p>
+                    <p>Nous accompagnons les femmes en situation de prostitution, les veuves et les orphelins vers une nouvelle vie digne avec compassion et respect.</p>
+                    <div class="mission-stats">
+                        <span class="stat-number">300+</span>
+                        <span class="stat-label">Personnes accompagnées</span>
+                    </div>
+                    <div class="mission-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="progress-text">85% de réussite</span>
+                    </div>
                 </div>
                 
-                <div class="mission-card animate-on-scroll">
+                <div class="mission-card" data-scroll-reveal="fade-up" data-scroll-reveal-delay="200">
                     <div class="mission-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <h3>Former</h3>
-                    <p>Nous proposons des formations professionnelles pour permettre l'autonomie économique des bénéficiaires.</p>
+                    <p>Nous proposons des formations professionnelles de qualité pour permettre l'autonomie économique des bénéficiaires.</p>
+                    <div class="mission-stats">
+                        <span class="stat-number">120+</span>
+                        <span class="stat-label">Personnes formées</span>
+                    </div>
+                    <div class="mission-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92%"></div>
+                        </div>
+                        <span class="progress-text">92% d'insertion</span>
+                    </div>
                 </div>
                 
-                <div class="mission-card animate-on-scroll">
+                <div class="mission-card" data-scroll-reveal="fade-up" data-scroll-reveal-delay="400">
                     <div class="mission-icon">
                         <i class="fas fa-hands-helping"></i>
                     </div>
                     <h3>Soutenir</h3>
-                    <p>Nous offrons un soutien psychologique, social et matériel aux personnes en difficulté.</p>
+                    <p>Nous offrons un soutien psychologique, social et matériel complet aux personnes en difficulté.</p>
+                    <div class="mission-stats">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Familles soutenues</span>
+                    </div>
+                    <div class="mission-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 78%"></div>
+                        </div>
+                        <span class="progress-text">78% de stabilité</span>
+                    </div>
                 </div>
                 
-                <div class="mission-card animate-on-scroll">
+                <div class="mission-card" data-scroll-reveal="fade-up" data-scroll-reveal-delay="600">
                     <div class="mission-icon">
                         <i class="fas fa-seedling"></i>
                     </div>
                     <h3>Transformer</h3>
-                    <p>Nous transformons des vies en créant des opportunités d'emploi et d'épanouissement.</p>
+                    <p>Nous transformons des vies en créant des opportunités d'emploi et d'épanouissement durable.</p>
+                    <div class="mission-stats">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Bénévoles actifs</span>
+                    </div>
+                    <div class="mission-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                        <span class="progress-text">95% d'engagement</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,64 +234,94 @@
     <!-- Nos Valeurs -->
     <section class="our-values">
         <div class="container">
-            <h2 class="section-title text-center animate-on-scroll">Nos Valeurs</h2>
-            <p class="section-description text-center animate-on-scroll">
-                Les principes qui guident chacune de nos actions
-            </p>
+            <div class="values-header" data-scroll-reveal="fade-up">
+                <div class="values-badge">
+                    <i class="fas fa-gem"></i>
+                    Nos Valeurs
+                </div>
+                <h2 class="section-title">Les principes qui nous guident</h2>
+                <p class="section-description">
+                    Les valeurs fondamentales qui inspirent chacune de nos actions
+                </p>
+            </div>
             
             <div class="values-grid">
-                <div class="value-item animate-on-scroll">
+                <div class="value-item" data-scroll-reveal="fade-up">
                     <div class="value-icon">
                         <i class="fas fa-dove"></i>
                     </div>
                     <h3>Dignité</h3>
                     <p>Nous respectons la dignité de chaque personne et œuvrons pour qu'elle puisse vivre dignement.</p>
+                    <div class="value-highlight">
+                        <i class="fas fa-quote-left"></i>
+                        <span>Chaque personne mérite le respect</span>
+                    </div>
                 </div>
                 
-                <div class="value-item animate-on-scroll">
+                <div class="value-item" data-scroll-reveal="fade-up" data-scroll-reveal-delay="200">
                     <div class="value-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h3>Solidarité</h3>
                     <p>Nous croyons en la force de la solidarité et de l'entraide pour transformer la société.</p>
+                    <div class="value-highlight">
+                        <i class="fas fa-quote-left"></i>
+                        <span>Ensemble, nous sommes plus forts</span>
+                    </div>
                 </div>
                 
-                <div class="value-item animate-on-scroll">
+                <div class="value-item" data-scroll-reveal="fade-up" data-scroll-reveal-delay="400">
                     <div class="value-icon">
                         <i class="fas fa-balance-scale"></i>
                     </div>
                     <h3>Équité</h3>
                     <p>Nous agissons pour une société plus juste où chacun a les mêmes opportunités.</p>
+                    <div class="value-highlight">
+                        <i class="fas fa-quote-left"></i>
+                        <span>Justice et égalité pour tous</span>
+                    </div>
                 </div>
                 
-                <div class="value-item animate-on-scroll">
+                <div class="value-item" data-scroll-reveal="fade-up" data-scroll-reveal-delay="600">
                     <div class="value-icon">
                         <i class="fas fa-lightbulb"></i>
                     </div>
                     <h3>Innovation</h3>
                     <p>Nous développons des solutions innovantes pour répondre aux défis sociaux.</p>
+                    <div class="value-highlight">
+                        <i class="fas fa-quote-left"></i>
+                        <span>Solutions créatives pour demain</span>
+                    </div>
                 </div>
                 
-                <div class="value-item animate-on-scroll">
+                <div class="value-item" data-scroll-reveal="fade-up" data-scroll-reveal-delay="800">
                     <div class="value-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Transparence</h3>
                     <p>Nous agissons avec transparence et rendons compte de nos actions à nos partenaires.</p>
+                    <div class="value-highlight">
+                        <i class="fas fa-quote-left"></i>
+                        <span>Confiance et transparence</span>
+                    </div>
                 </div>
                 
-                <div class="value-item animate-on-scroll">
+                <div class="value-item" data-scroll-reveal="fade-up" data-scroll-reveal-delay="1000">
                     <div class="value-icon">
                         <i class="fas fa-leaf"></i>
                     </div>
                     <h3>Durabilité</h3>
                     <p>Nous créons des solutions durables qui ont un impact à long terme.</p>
+                    <div class="value-highlight">
+                        <i class="fas fa-quote-left"></i>
+                        <span>Impact durable pour l'avenir</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-      <!-- Notre Équipe -->
+    <!-- Notre Équipe -->
     <section class="our-team">
         <div class="container">
             <h2 class="section-title text-center animate-on-scroll">Notre Équipe</h2>
@@ -222,21 +329,26 @@
                 Des professionnels dévoués et passionnés par l'action humanitaire
             </p>
             
-            <div class="team-grid">
-                <div class="team-member animate-on-scroll">
-                    <div class="member-image" style="width:120px;height:120px;">
-                        <img src="images/equipe1.png" alt="Membre équipe 1">
+            <!-- Président seul en haut -->
+            <div class="president-section">
+                <div class="team-member president animate-on-scroll">
+                    <div class="member-image" style="width:150px;height:150px;">
+                        <img src="images/equipe1.png" alt="Président">
                     </div>
                     <div class="member-info">
                         <h3>M. SANGARE Aboubacar</h3>
                         <span class="member-role">PRÉSIDENT</span>
-                        <p>Membre dévoué de notre équipe, contribuant activement à nos missions humanitaires.</p>
+                        <p>Président fondateur de Renaissance Espoir de Vie, dévoué à la mission humanitaire et au développement communautaire.</p>
                     </div>
                 </div>
-                
+            </div>
+            
+            <!-- Autres membres en 3 rangées de 3 -->
+            <div class="team-grid">
+                <!-- Rangée 1 -->
                 <div class="team-member animate-on-scroll">
                     <div class="member-image" style="width:120px;height:120px;">
-                        <img src="images/equipe1.1.jpg" alt="Membre équipe 2">
+                        <img src="images/equipe1.1.jpg" alt="Vice Présidente">
                     </div>
                     <div class="member-info">
                         <h3>Mme KOFFI Victorine Agbodja</h3>
@@ -247,7 +359,7 @@
                 
                 <div class="team-member animate-on-scroll">
                     <div class="member-image" style="width:120px;height:120px;">
-                        <img src="images/equipe2.jpg" alt="Membre équipe 3">
+                        <img src="images/equipe2.jpg" alt="Secrétaire Générale">
                     </div>
                     <div class="member-info">
                         <h3>Mme KONE K. HAdja</h3>
@@ -258,7 +370,7 @@
                 
                 <div class="team-member animate-on-scroll">
                     <div class="member-image" style="width:120px;height:120px;">
-                        <img src="images/equipe3.png" alt="Membre équipe 4">
+                        <img src="images/equipe3.png" alt="Trésorier Général">
                     </div>
                     <div class="member-info">
                         <h3>M. KONE Kolotioloma Mamadou</h3>
@@ -267,9 +379,10 @@
                     </div>
                 </div>
                 
+                <!-- Rangée 2 -->
                 <div class="team-member animate-on-scroll">
                     <div class="member-image" style="width:120px;height:120px;">
-                        <img src="images/equipe18.jpg" alt="Membre équipe 5">
+                        <img src="images/equipe18.jpg" alt="Trésorier Adjoint">
                     </div>
                     <div class="member-info">
                         <h3>M. KOUAME KOBENAN Emmanuel</h3>
@@ -280,7 +393,7 @@
                 
                 <div class="team-member animate-on-scroll">
                     <div class="member-image" style="width:120px;height:120px;">
-                        <img src="images/equipe4.jpg" alt="Membre équipe 6">
+                        <img src="images/equipe4.jpg" alt="Responsable Santé">
                     </div>
                     <div class="member-info">
                         <h3>Dr DIABAGATÉ Mariam</h3>
@@ -288,9 +401,10 @@
                         <p>Membre engagé de notre équipe, contribuant à nos missions sociales.</p>
                     </div>
                 </div>
+                
                 <div class="team-member animate-on-scroll">
                     <div class="member-image" style="width:120px;height:120px;">
-                        <img src="images/equipe7.jpg" alt="Membre équipe 7">
+                        <img src="images/equipe7.jpg" alt="Responsable Adjoint Santé">
                     </div>
                     <div class="member-info">
                         <h3>Dr KASSI Brigitte</h3>
@@ -298,9 +412,11 @@
                         <p>Membre dévoué de notre équipe, participant aux actions de développement.</p>
                     </div>
                 </div>
+                
+                <!-- Rangée 3 -->
                 <div class="team-member animate-on-scroll">
                     <div class="member-image" style="width:120px;height:120px;">
-                        <img src="images/equipe5.png" alt="Membre équipe 9">
+                        <img src="images/equipe5.png" alt="Responsable Éducation">
                     </div>
                     <div class="member-info">
                         <h3>M. KONÉ Bazoumana</h3>
@@ -308,58 +424,73 @@
                         <p>Membre passionné de notre équipe, œuvrant pour le bien-être communautaire.</p>
                     </div>
                 </div>
+                
                 <div class="team-member animate-on-scroll">
                     <div class="member-image" style="width:120px;height:120px;">
-                        <img src="images/equipe6.jpg" alt="Membre équipe 18">
+                        <img src="images/equipe6.jpg" alt="Chargée Promotion Femme">
                     </div>
                     <div class="member-info">
                         <h3>Mme CADJA ATTEBY Mireille</h3>
                         <span class="member-role">CHARGÉE DE LA PROMOTION DE LA FEMME ET DE LA RECONVERSION PROFESSIONNELLE</span>
                         <p>Membre actif de notre équipe, contribuant à nos programmes d'aide.</p>
                     </div>
-                    
                 </div>
+                
                 <div class="team-member animate-on-scroll">
                     <div class="member-image" style="width:120px;height:120px;">
-                        <img src="images/equipe9.jpg" alt="Membre équipe 18">
+                        <img src="images/equipe9.jpg" alt="Chargée Relations Extérieures">
                     </div>
                     <div class="member-info">
                         <h3>Mme SAHIÉ Esther</h3>
                         <span class="member-role">CHARGÉE DES RELATIONS EXTÉRIEURES</span>
                         <p>Membre actif de notre équipe, contribuant à nos programmes d'aide.</p>
                     </div>
+                </div>
             </div>
         </div>
     </section>
-
     <!-- Nos Partenaires -->
     <section class="our-partners">
         <div class="container">
-            <h2 class="section-title text-center animate-on-scroll">Nos Partenaires</h2>
-            <p class="section-description text-center animate-on-scroll">
-                Nous collaborons avec des organisations locales et internationales pour maximiser notre impact
-            </p>
+            <div class="partners-header" data-scroll-reveal="fade-up">
+                <div class="partners-badge">
+                    <i class="fas fa-handshake"></i>
+                    Nos Partenaires
+                </div>
+                <h2 class="section-title">Collaborations stratégiques</h2>
+                <p class="section-description">
+                    Nous collaborons avec des organisations locales et internationales pour maximiser notre impact
+                </p>
+            </div>
             
-            <div class="partners-grid">
-                <div class="partner-logo animate-on-scroll">
-                    <img src="images/partenaire1.jpg" alt="Partenaire 1">
-                    <h4>Partenaire 1</h4>
+            <div class="partners-carousel">
+                <button class="carousel-nav prev" onclick="scrollPartners('left')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-nav next" onclick="scrollPartners('right')">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="partners-track">
+                    <div class="partner-card" data-scroll-reveal="fade-up">
+                        <img src="images/partenaire1.jpg" alt="Partenaire 1">
+                        <h4>Partenaire 1</h4>
+                    </div>
                     
-                </div>
-                <div class="partner-logo animate-on-scroll">
-                    <img src="images/partenaire2.jpg" alt="Partenaire 2">
-                    <h4>Partenaire 2</h4>
+                    <div class="partner-card" data-scroll-reveal="fade-up" data-scroll-reveal-delay="100">
+                        <img src="images/partenaire2.jpg" alt="Partenaire 2">
+                        <h4>Partenaire 2</h4>
+                    </div>
                     
-                </div>
-                <div class="partner-logo animate-on-scroll">
-                    <img src="images/partenaire3.jpg" alt="Partenaire 3">
-                    <h4>Partenaire 3</h4>
+                    <div class="partner-card" data-scroll-reveal="fade-up" data-scroll-reveal-delay="200">
+                        <img src="images/partenaire3.jpg" alt="Partenaire 3">
+                        <h4>Partenaire 3</h4>
+                    </div>
                     
-                </div>
-                <div class="partner-logo animate-on-scroll">
-                    <img src="images/partenaire4.jpg" alt="Partenaire 4">
-                    <h4>Partenaire 4</h4>
-                    
+                    <div class="partner-card" data-scroll-reveal="fade-up" data-scroll-reveal-delay="300">
+                        <img src="images/partenaire4.jpg" alt="Partenaire 4">
+                        <h4>Partenaire 4</h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -369,12 +500,16 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title animate-on-scroll">Rejoignez notre mission</h2>
-                <p class="cta-description animate-on-scroll">
+                <div class="cta-badge" data-scroll-reveal="fade-up">
+                    <i class="fas fa-star"></i>
+                    Rejoignez-nous
+                </div>
+                <h2 class="cta-title" data-scroll-reveal="fade-up" data-scroll-reveal-delay="200">Rejoignez notre mission</h2>
+                <p class="cta-description" data-scroll-reveal="fade-up" data-scroll-reveal-delay="400">
                     Ensemble, nous pouvons transformer des vies et redonner espoir à ceux qui en ont le plus besoin. 
                     Chaque don, chaque heure de bénévolat compte.
                 </p>
-                <div class="cta-buttons animate-on-scroll">
+                <div class="cta-buttons" data-scroll-reveal="fade-up" data-scroll-reveal-delay="600">
                     <a href="index.html#volunteer" class="btn btn-primary btn-large">
                         <i class="fas fa-hands-helping"></i>
                         Devenir bénévole
@@ -447,10 +582,47 @@
         </div>
     </footer>
 
-    <!-- ScrollReveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- JavaScript -->
-    <script src="main.js"></script>
-    <script src="animations.js"></script>
+    <!-- JavaScript - Optimisé -->
+    <script src="main.js" defer></script>
+    
+    <!-- ScrollReveal Initialisation -->
+    <script>
+        // Initialisation de ScrollReveal
+        ScrollReveal().reveal('[data-scroll-reveal="fade-up"]', {
+            distance: '50px',
+            origin: 'bottom',
+            duration: 1000,
+            delay: 0,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            interval: 100
+        });
+        
+        ScrollReveal().reveal('[data-scroll-reveal="fade-right"]', {
+            distance: '50px',
+            origin: 'left',
+            duration: 1000,
+            delay: 0,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)'
+        });
+        
+        ScrollReveal().reveal('[data-scroll-reveal="fade-left"]', {
+            distance: '50px',
+            origin: 'right',
+            duration: 1000,
+            delay: 0,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)'
+        });
+        
+        // Animation avec délai personnalisé
+        ScrollReveal().reveal('[data-scroll-reveal-delay]', {
+            distance: '50px',
+            origin: 'bottom',
+            duration: 1000,
+            delay: function(el) {
+                return el.getAttribute('data-scroll-reveal-delay') || 0;
+            },
+            easing: 'cubic-bezier(0.5, 0, 0, 1)'
+        });
+    </script>
 </body>
 </html> 
