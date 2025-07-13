@@ -1,0 +1,24 @@
+{
+  "name": "ong-renaissance-espoir-de-vie",
+  "version": "1.0.0",
+  "description": "Site web de l'ONG Renaissance Espoir de Vie",
+  "main": "index.html",
+  "scripts": {
+    "optimize-images": "node optimize_images.js",
+    "optimize-css": "node optimize_css.js",
+    "optimize-html": "node add_lazy_loading.js",
+    "optimize-all": "npm run optimize-css && npm run optimize-images && npm run optimize-html",
+    "test-performance": "echo 'Testez votre site sur: https://pagespeed.web.dev/'",
+    "dev": "python -m http.server 8000",
+    "build": "npm run optimize-all"
+  },
+  "keywords": ["ong", "humanitaire", "cote-divoire", "optimisation"],
+  "author": "Renaissance Espoir de Vie",
+  "license": "MIT",
+  "devDependencies": {
+    "imagemagick": "^0.1.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
